@@ -20,6 +20,7 @@ function Body() {
                 "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
               }
               rating={"⭐⭐⭐⭐"}
+              quantity={1}
             />
             <Product
               heading={
@@ -30,6 +31,7 @@ function Body() {
                 "https://images-na.ssl-images-amazon.com/images/I/61FJtVQh9bL._AC_SX425_.jpg"
               }
               rating={"⭐⭐⭐"}
+              quantity={1}
             />
             <Product
               heading={"Samasung Smart Watch"}
@@ -38,6 +40,7 @@ function Body() {
                 "https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
               }
               rating={"⭐⭐⭐"}
+              quantity={1}
             />
             <Product
               heading={
@@ -48,6 +51,7 @@ function Body() {
                 "https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
               }
               rating={"⭐⭐⭐⭐⭐"}
+              quantity={1}
             />
             <Product
               heading={
@@ -58,6 +62,7 @@ function Body() {
                 "https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
               }
               rating={"⭐⭐⭐⭐"}
+              quantity={1}
             />
             <Product
               heading={
@@ -68,6 +73,7 @@ function Body() {
                 "https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
               }
               rating={"⭐⭐⭐⭐"}
+              quantity={1}
             />
           </div>
 
