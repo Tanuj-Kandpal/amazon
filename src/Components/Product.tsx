@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addItem, removeItem, clearCart } from "../cartSlice.jsx";
+import { addItem } from "../cartSlice.jsx";
 
 interface ProductProps {
   heading: string;
@@ -12,7 +12,7 @@ function Product({ heading, price, image, rating }: ProductProps) {
   const dispatch = useDispatch();
 
   function handleAddItem() {
-    dispatch(addItem({heading, price, image, rating}));
+    dispatch(addItem({ heading, price, image, rating }));
   }
 
   return (

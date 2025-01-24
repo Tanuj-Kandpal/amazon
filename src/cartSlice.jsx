@@ -11,8 +11,10 @@ const cartSlice = createSlice({
     clearCart: function (state) {
       state.items = [];
     },
-    removeItem: function (state, action) { 
-      state.items.pop(action.payload);
+    removeItem: function (state, action) {
+      state.items = state.items.filter(
+        (item) => item.image !== action.payload // Ensure the correct item is removed
+      );
     },
   },
 });
