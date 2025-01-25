@@ -8,10 +8,14 @@ import {
 } from "../cartSlice.jsx";
 import { HiPlusCircle } from "react-icons/hi";
 import { ProductProps } from "../Interfaces/Interfaces.js";
+import { useNavigate } from "react-router-dom";
 
 function ShoppingCartPage() {
   const cartItems = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   function handleRemove(item: number) {
     dispatch(removeItem(item));
   }
@@ -22,6 +26,10 @@ function ShoppingCartPage() {
 
   function handleDecrement(item: number) {
     dispatch(decreaseItemQuantity(item));
+  }
+
+  function handleCheckout() {
+    navigate("/Checkout");
   }
 
   return (
@@ -81,6 +89,14 @@ function ShoppingCartPage() {
             ))}
           </div>
         )}
+        <div className="flex justify-end">
+          <button
+            className="font-semibold border-cyan-300 p-3 mt-6 bg-[#E28F33] rounded-xl"
+            onClick={handleCheckout}
+          >
+            Proceed to Checkout Page
+          </button>
+        </div>
       </div>
     </div>
   );
