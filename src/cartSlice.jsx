@@ -6,9 +6,7 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: function (state, action) {
-      if (
-        !state.items.some((item) => item.heading === action.payload.heading)
-      ) {
+      if (!state.items.some((item) => item.index === action.payload.index)) {
         state.items.push(action.payload);
       }
       // state.items.push(action.payload);
@@ -18,15 +16,15 @@ const cartSlice = createSlice({
     },
     removeItem: function (state, action) {
       state.items = state.items.filter(
-        (item) => item.image !== action.payload // Ensure the correct item is removed
+        (item) => item.index !== action.payload // Ensure the correct item is removed
       );
     },
     increaseItemQuantity: function (state, action) {
-      let item = state.items.find((item) => item.quantity === action.payload);
+      let item = state.items.find((item) => item.index === action.payload);
       item.quantity++;
     },
     decreaseItemQuantity: function (state, action) {
-      let item = state.items.find((item) => item.quantity === action.payload);
+      let item = state.items.find((item) => item.index === action.payload);
       {
         item.quantity < 1 ? "" : item.quantity--;
       }

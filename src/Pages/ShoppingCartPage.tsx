@@ -12,7 +12,7 @@ import { ProductProps } from "../Interfaces/Interfaces.js";
 function ShoppingCartPage() {
   const cartItems = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
-  function handleRemove(item: string) {
+  function handleRemove(item: number) {
     dispatch(removeItem(item));
   }
 
@@ -57,21 +57,21 @@ function ShoppingCartPage() {
                 </div>
                 <div className="flex items-center">
                   <button
-                    onClick={() => handleIncrement(item.quantity)}
+                    onClick={() => handleIncrement(item.index)}
                     className="text-red-500 hover:text-red-700 transition-colors p-2"
                   >
-                    <HiPlusCircle />
+                    <HiPlusCircle className="w-6 h-6" />
                   </button>
-                  <span>{item.quantity}</span>
+                  <span className="text-lg font-medium">{item.quantity}</span>
                   <button
-                    onClick={() => handleDecrement(item.quantity)}
+                    onClick={() => handleDecrement(item.index)}
                     className="text-red-500 hover:text-red-700 transition-colors p-2"
                   >
-                    <FaCircleMinus />
+                    <FaCircleMinus className="w-6 h-6" />
                   </button>
                 </div>
                 <button
-                  onClick={() => handleRemove(item.image)}
+                  onClick={() => handleRemove(item.index)}
                   className="text-red-500 hover:text-red-700 transition-colors p-2"
                   aria-label="Remove item"
                 >

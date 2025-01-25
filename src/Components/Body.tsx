@@ -21,6 +21,7 @@ function Body() {
               }
               rating={"⭐⭐⭐⭐"}
               quantity={1}
+              index={1}
             />
             <Product
               heading={
@@ -32,6 +33,7 @@ function Body() {
               }
               rating={"⭐⭐⭐"}
               quantity={1}
+              index={2}
             />
             <Product
               heading={"Samasung Smart Watch"}
@@ -41,6 +43,7 @@ function Body() {
               }
               rating={"⭐⭐⭐"}
               quantity={1}
+              index={3}
             />
             <Product
               heading={
@@ -52,6 +55,7 @@ function Body() {
               }
               rating={"⭐⭐⭐⭐⭐"}
               quantity={1}
+              index={4}
             />
             <Product
               heading={
@@ -63,6 +67,7 @@ function Body() {
               }
               rating={"⭐⭐⭐⭐"}
               quantity={1}
+              index={5}
             />
             <Product
               heading={
@@ -74,6 +79,7 @@ function Body() {
               }
               rating={"⭐⭐⭐⭐"}
               quantity={1}
+              index={6}
             />
           </div>
 
