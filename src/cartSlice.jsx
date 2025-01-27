@@ -29,6 +29,11 @@ const cartSlice = createSlice({
         item.quantity < 1 ? "" : item.quantity--;
       }
     },
+    subTotal: function (state, action) {
+      console.log(action.payload);
+
+      let subTotal = action.payload;
+    },
   },
 });
 
