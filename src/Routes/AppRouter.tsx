@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
 import ShoppingCartPage from "../Pages/ShoppingCartPage";
-import CheckoutPage from "./../Pages/CheckoutPage";
+import CheckoutPage from "../Pages/CheckoutPage";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    children: [],
   },
   {
     path: "/Cart",

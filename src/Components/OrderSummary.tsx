@@ -1,11 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
-import subTotal from "../cartSlice.jsx";
-
-type OrderSummaryProps = {
-  subtotal: number;
-  tax: number;
-  total: number;
-};
+import { useSelector } from "react-redux";
 
 function OrderSummary() {
   const cartItems = useSelector((store) => store.cart.items);
@@ -40,4 +33,3 @@ function OrderSummary() {
 }
 
 export default OrderSummary;
-// #E28F33

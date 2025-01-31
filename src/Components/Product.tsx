@@ -1,13 +1,19 @@
 import { useDispatch } from "react-redux";
-import { addItem } from "../cartSlice.jsx";
+import { addItem } from "../cartSlice.js";
 import { ProductProps } from "../Interfaces/Interfaces.js";
 
-
-function Product({ index,heading, price, image, rating, quantity }: ProductProps) {
+function Product({
+  index,
+  heading,
+  price,
+  image,
+  rating,
+  quantity,
+}: ProductProps) {
   const dispatch = useDispatch();
 
   function handleAddItem() {
-    dispatch(addItem({ index,heading, price, image, rating, quantity }));
+    dispatch(addItem({ index, heading, price, image, rating, quantity }));
   }
 
   return (

@@ -1,17 +1,12 @@
 import { Provider } from "react-redux";
-import HomePage from "./Pages/HomePage";
-import store from "./store";
+import store from "./store.js";
 import { RouterProvider } from "react-router-dom";
-import appRouter from "./Routes/appRouter.jsx";
-import ShoppingCartPage from "./Pages/ShoppingCartPage";
+import appRouter from "./Routes/AppRouter.js";
 function AppLayout() {
   return (
     <>
       <Provider store={store}>
-        <RouterProvider router={appRouter}>
-          <HomePage />
-          <ShoppingCartPage />
-        </RouterProvider>
+        <RouterProvider router={appRouter}></RouterProvider>
       </Provider>
     </>
   );

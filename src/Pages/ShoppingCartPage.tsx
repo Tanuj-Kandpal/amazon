@@ -5,7 +5,7 @@ import {
   removeItem,
   increaseItemQuantity,
   decreaseItemQuantity,
-} from "../cartSlice.jsx";
+} from "../cartSlice.js";
 import { HiPlusCircle } from "react-icons/hi";
 import { ProductProps } from "../Interfaces/Interfaces.js";
 import { useNavigate } from "react-router-dom";

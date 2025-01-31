@@ -1,43 +1,25 @@
-import { Button } from "./components/Button";
+import { useNavigate } from "react-router";
+import { randomOrderNumber } from "../Helper/helper";
 
 interface OrderSuccessProps {
   orderNumber: string;
   estimatedDelivery: string;
-  onViewOrder: () => void;
-  onReturnHome: () => void;
 }
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline";
-}
+// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+//   variant?: "primary" | "outline";
+// }
+// const baseStyles =
+//   "px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors";
+// const variantStyles =
+//   variant === "primary"
+//     ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+//     : "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500";
 
-function Button({
-  children,
-  variant = "primary",
-  className = "",
-  ...props
-}): ButtonProps {
-  const baseStyles =
-    "px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors";
-  const variantStyles =
-    variant === "primary"
-      ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
-      : "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500";
-  return (
-    <button
-      className={`${baseStyles} ${variantStyles} ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
-
-export default function OrderSuccess({
-  orderNumber,
-  estimatedDelivery,
-  onViewOrder,
-  onReturnHome,
-}: OrderSuccessProps) {
+function OrderSuccess() {
+  const navigate = useNavigate();
+  function onReturnHome() {
+    navigate("/");
+  }
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -69,53 +51,30 @@ export default function OrderSuccess({
           <div className="mt-8">
             <div className="text-sm text-gray-600">
               <p className="font-medium">Order number:</p>
-              <p>{orderNumber}</p>
+              <p>{randomOrderNumber()}</p>
             </div>
             <div className="mt-3 text-sm text-gray-600">
               <p className="font-medium">Estimated delivery:</p>
-              <p>{estimatedDelivery}</p>
+              <p>{"Will be delivered within 2 days"}</p>
             </div>
           </div>
 
           <div className="mt-8 flex flex-col space-y-4">
-            <Button
-              onClick={onViewOrder}
+            <button
+              // onClick={onViewOrder}
               className="w-full flex justify-center items-center"
+            ></button>
+            <button
+              onClick={onReturnHome}
+              className="w-full px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
             >
-              <svg
-                className="mr-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-                />
-              </svg>
-              View Order
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Button>
-            <Button variant="outline" onClick={onReturnHome} className="w-full">
               Return to Home
-            </Button>
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default OrderSuccess;
