@@ -1,20 +1,6 @@
 import { useNavigate } from "react-router";
 import { randomOrderNumber } from "../Helper/helper";
 
-interface OrderSuccessProps {
-  orderNumber: string;
-  estimatedDelivery: string;
-}
-// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-//   variant?: "primary" | "outline";
-// }
-// const baseStyles =
-//   "px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors";
-// const variantStyles =
-//   variant === "primary"
-//     ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
-//     : "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500";
-
 function OrderSuccess() {
   const navigate = useNavigate();
   function onReturnHome() {

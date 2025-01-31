@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Navbar from "../Components/Navbar";
 import { FaCircleMinus, FaTrashCan } from "react-icons/fa6";
 import {
@@ -9,9 +9,10 @@ import {
 import { HiPlusCircle } from "react-icons/hi";
 import { ProductProps } from "../Interfaces/Interfaces.js";
 import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "../hooks.js";
 
 function ShoppingCartPage() {
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useAppSelector((store) => store.cart.items);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();

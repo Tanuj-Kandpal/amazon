@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import store from "./store.js";
+import { store } from "./store.js";
 import { RouterProvider } from "react-router-dom";
 import appRouter from "./Routes/AppRouter.js";
 function AppLayout() {

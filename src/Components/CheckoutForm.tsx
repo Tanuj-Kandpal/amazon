@@ -6,11 +6,10 @@ const CheckoutForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setIsVisible] = useState(true);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: { preventDefault: () => void; }) {
     setLoading(true);
     setIsVisible(false);
     e.preventDefault();
-
   }
 
   return (

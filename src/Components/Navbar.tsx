@@ -1,10 +1,10 @@
 import { TiShoppingCart } from "react-icons/ti";
-import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Searchbar from "./Searchbar";
+import { useAppSelector } from "../hooks";
 
 function Navbar() {
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useAppSelector((store) => store.cart.items);
   const navigate = useNavigate();
 
   function handleCart() {
@@ -24,7 +24,7 @@ function Navbar() {
           <h1>Delivering to Gurugram</h1>
         </div>
 
-        {/* <Searchbar /> */}
+        <Searchbar />
         <div className="flex items-center gap-5">
           <div>
             <h1>Hello,</h1>

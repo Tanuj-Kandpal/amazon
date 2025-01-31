@@ -1,19 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-type Item = {
-  index: number;
-  name: string; // Example additional property
-  quantity: number; // Example additional property
-};
-
-type State = {
-  items: Item[];
-};
-
-type Action = {
-  type: string;
-  payload: Item;
-};
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Action, Product, State } from "./hooks";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -21,7 +7,7 @@ const cartSlice = createSlice({
     items: [],
   },
   reducers: {
-    addItem: function (state: State, action: Action) {
+    addItem: function (state: State, action: PayloadAction<Product>) {
       if (!state.items.some((item) => item.index === action.payload.index)) {
         state.items.push(action.payload);
       }
@@ -37,17 +23,15 @@ const cartSlice = createSlice({
     },
     increaseItemQuantity: function (state: State, action: Action) {
       const item = state.items.find((item) => item.index === action.payload);
-      item.quantity++;
-    },
-    decreaseItemQuantity: function (state: State, action: Action) {
-      let item = state.items.find((item) => item.index === action.payload);
-      {
-        item.quantity < 1 ? "" : item.quantity--;
+      if (item) {
+        item.quantity++;
       }
     },
-    subTotal: function (state: State, action: Action) {
-      console.log(action.payload);
-      const subTotal = action.payload;
+    decreaseItemQuantity: function (state: State, action: Action) {
+      const item = state.items.find((item) => item.index === action.payload);
+      if (item && item.quantity > 0) {
+        item.quantity--;
+      }
     },
   },
 });

@@ -1,10 +1,19 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../hooks";
+
+type CurrentObject = {
+  price: number;
+  quantity: number;
+};
 
 function OrderSummary() {
-  const cartItems = useSelector((store) => store.cart.items);
-  const subTotal: number = cartItems.reduce(function (result, curr) {
+  const cartItems = useAppSelector((state) => state.cart.items);
+  const subTotal: number = cartItems.reduce(function (
+    result: number,
+    curr: CurrentObject
+  ) {
     return curr.price * curr.quantity + result;
-  }, 0);
+  },
+  0);
   const randomTax: number = Math.floor(Math.random() * 10);
   const total: number = subTotal + randomTax;
 
