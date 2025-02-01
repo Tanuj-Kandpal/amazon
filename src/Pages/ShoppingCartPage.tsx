@@ -8,7 +8,7 @@ import {
 } from "../cartSlice.js";
 import { HiPlusCircle } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-import { ProductDetails, useAppSelector } from "../Helper/hooks.js";
+import { ProductDetails, useAppSelector } from "../Helper/types.js";
 
 function ShoppingCartPage() {
   const cartItems = useAppSelector((store) => store.cart.items);

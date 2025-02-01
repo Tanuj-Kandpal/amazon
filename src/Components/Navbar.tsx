@@ -1,7 +1,7 @@
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useNavigate } from "react-router-dom";
 import Searchbar from "./Searchbar";
-import { useAppSelector } from "../Helper/hooks";
+import { useAppSelector } from "../Helper/types";
 
 function Navbar() {
   const cartItems = useAppSelector((store) => store.cart.items);
