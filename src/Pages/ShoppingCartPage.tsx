@@ -7,9 +7,8 @@ import {
   decreaseItemQuantity,
 } from "../cartSlice.js";
 import { HiPlusCircle } from "react-icons/hi";
-import { ProductProps } from "../Interfaces/Interfaces.js";
 import { useNavigate } from "react-router-dom";
-import { useAppSelector } from "../hooks.js";
+import { ProductDetails, useAppSelector } from "../Helper/hooks.js";
 
 function ShoppingCartPage() {
   const cartItems = useAppSelector((store) => store.cart.items);
@@ -44,7 +43,7 @@ function ShoppingCartPage() {
           <p className="text-xl text-gray-600">Your cart is empty.</p>
         ) : (
           <div className="space-y-6">
-            {cartItems.map((item: ProductProps) => (
+            {cartItems.map((item: ProductDetails) => (
               <div
                 key={item.image}
                 className="bg-white rounded-lg shadow-md p-6 flex items-center gap-6 transition-all hover:shadow-lg"

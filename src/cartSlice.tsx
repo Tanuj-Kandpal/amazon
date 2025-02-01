@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Action, ProductDetails, State } from "./hooks";
+import { Action, ProductDetails, State } from "./Helper/hooks";
 
 const cartSlice = createSlice({
   name: "cart",

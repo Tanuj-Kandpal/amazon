@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../cartSlice.js";
-import { ProductDetails } from "../hooks.tsx";
+import { ProductDetails } from "../Helper/hooks.tsx";
 
 function Product({
   index,

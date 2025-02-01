@@ -1,4 +1,4 @@
-import { useAppSelector } from "../hooks";
+import { useAppSelector } from "../Helper/hooks";
 
 type CurrentObject = {
   price: number;

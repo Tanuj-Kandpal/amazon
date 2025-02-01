@@ -1,4 +1,4 @@
-import { ProductList } from "../hooks";
+import { ProductList } from "./hooks";
 
 const productList: ProductList = [
   {
