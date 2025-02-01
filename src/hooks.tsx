@@ -22,3 +22,5 @@ export type Product = {
   rating: string;
   quantity: number;
 };
+
+export type ProductList = Product[];
