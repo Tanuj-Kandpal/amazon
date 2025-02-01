@@ -6,7 +6,7 @@ export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();
 
 export type State = {
-  items: Product[];
+  items: ProductDetails[];
 };
 
 export type Action = {
@@ -14,7 +14,7 @@ export type Action = {
   payload: number;
 };
 
-export type Product = {
+export type ProductDetails = {
   index: number;
   heading: string;
   price: number;
@@ -23,4 +23,4 @@ export type Product = {
   quantity: number;
 };
 
-export type ProductList = Product[];
+export type ProductList = ProductDetails[];

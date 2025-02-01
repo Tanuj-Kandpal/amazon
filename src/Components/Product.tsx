@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../cartSlice.js";
-import { ProductProps } from "../Interfaces/Interfaces.js";
+import { ProductDetails } from "../hooks.tsx";
 
 function Product({
   index,
@@ -9,7 +9,7 @@ function Product({
   image,
   rating,
   quantity,
-}: ProductProps) {
+}: ProductDetails) {
   const dispatch = useDispatch();
 
   function handleAddItem() {

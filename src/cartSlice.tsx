@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Action, Product, State } from "./hooks";
+import { Action, ProductDetails, State } from "./hooks";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -7,7 +7,7 @@ const cartSlice = createSlice({
     items: [],
   },
   reducers: {
-    addItem: function (state: State, action: PayloadAction<Product>) {
+    addItem: function (state: State, action: PayloadAction<ProductDetails>) {
       if (!state.items.some((item) => item.index === action.payload.index)) {
         state.items.push(action.payload);
       }
