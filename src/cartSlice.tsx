@@ -11,7 +11,6 @@ const cartSlice = createSlice({
       if (!state.items.some((item) => item.index === action.payload.index)) {
         state.items.push(action.payload);
       }
-      // state.items.push(action.payload);
     },
     clearCart: function (state: State) {
       state.items = [];

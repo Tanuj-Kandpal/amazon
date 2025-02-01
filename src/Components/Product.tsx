@@ -25,7 +25,7 @@ function Product({
         <img className="h-60 mt-5" src={image} />
         <button
           onClick={handleAddItem}
-          className="p-1 bg-[#F0C14B] text-black mt-7 rounded-md"
+          className="p-1 bg-[#ffbc12] text-black mt-7 rounded-md"
         >
           Add to Basket
         </button>

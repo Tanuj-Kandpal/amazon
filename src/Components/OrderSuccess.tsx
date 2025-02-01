@@ -47,10 +47,6 @@ function OrderSuccess() {
 
           <div className="mt-8 flex flex-col space-y-4">
             <button
-              // onClick={onViewOrder}
-              className="w-full flex justify-center items-center"
-            ></button>
-            <button
               onClick={onReturnHome}
               className="w-full px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
             >
