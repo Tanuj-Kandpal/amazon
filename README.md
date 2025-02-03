@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# 🛒 Amazon Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An Amazon Clone built using **TypeScript**, **React.js**, **Tailwind CSS**, **Hooks**, **Jest** for testing, and **Redux Toolkit** for state management. This project supports **CRUD operations** for product management.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏗️ **Modern UI** with Tailwind CSS
+- ⚛️ **React Hooks** for state management
+- 🔄 **Redux Toolkit** for global state
+- 🛠️ **CRUD operations** (Create, Read, Update, Delete) for products
+- 🧪 **Jest** for unit testing
+- 📦 **TypeScript** for type safety
+- 🔥 **Responsive design** for mobile & desktop
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend:** React.js, TypeScript, Tailwind CSS
+- **State Management:** Redux Toolkit
+- **Testing:** Jest, React Testing Library
+- **Backend (optional):** JSON Server / Firebase / Node.js (not included by default)
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Project Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```plaintext
+📦 amazon-clone
+ ┣ 📂 src
+ ┃ ┣ 📂 components  # Reusable components
+ ┃ ┣ 📂 pages       # Page components (Home, Product, Cart, etc.)
+ ┃ ┣ 📂 redux       # Redux store and slices
+ ┃ ┣ 📂 hooks       # Custom hooks
+ ┃ ┣ 📂 tests       # Jest test cases
+ ┃ ┣ 📜 App.tsx     # Main application file
+ ┃ ┣ 📜 index.tsx   # Entry point
+ ┃ ┗ 📜 styles.css  # Global styles (Tailwind CSS)
+ ┣ 📜 package.json
+ ┣ 📜 tsconfig.json
+ ┣ 📜 README.md
+ ┗ 📜 .gitignore
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🎯 Installation & Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/yourusername/amazon-clone.git
+   cd amazon-clone
+   ```
+2. **Install dependencies**
+   ```sh
+   npm install  # or yarn install
+   ```
+3. **Start the development server**
+   ```sh
+   npm run dev  # or yarn dev
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 🧪 Running Tests
+
+To run Jest tests:
+```sh
+npm run test  # or yarn test
 ```
+
+## 🚀 Usage
+- Browse products 🛍️
+- Add to cart 🛒
+- View product details 🔍
+- Remove or update items ❌✏️
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+💙 Happy Coding!
