@@ -1,8 +1,5 @@
-import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 function Searchbar() {
-  const [text, setText] = useState("");
-
   return (
     <>
       <>
@@ -10,11 +7,10 @@ function Searchbar() {
           <input
             className="flex-grow text-sm text-gray-700 outline-none"
             type="text"
-            placeholder="Search Health Item"
-            onChange={(e) => setText(e.target.value)}
+            placeholder="Search Amazon.in"
           />
-          <button className="flex items-center justify-center h-16 p-5 bg-[#73A14E] cursor-pointer">
-            <IoMdSearch className="fill-white text-lg" />
+          <button className="flex items-center justify-center h-16 p-5 bg-yellow-600 cursor-pointer">
+            <IoMdSearch className="fill-black text-lg" />
           </button>
         </div>
       </>

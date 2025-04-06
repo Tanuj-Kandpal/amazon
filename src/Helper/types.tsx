@@ -15,13 +15,12 @@ export type Action = {
 };
 
 export type ProductDetails = {
-  id?: number;
-  name?: string;
-  category?: string;
-  mrp?: number;
-  sellingPrice?: number;
-  image?: string;
-  quantity?: number;
+  index: number;
+  heading: string;
+  price: number;
+  image: string;
+  rating: string;
+  quantity: number;
 };
 
 export type ProductList = ProductDetails[];

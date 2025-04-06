@@ -1,12 +1,12 @@
 import { Provider } from "react-redux";
 import { store } from "./store.js";
 import { RouterProvider } from "react-router-dom";
-import AppRouter from "../src/Routes/AppRouter.js";
+import appRouter from "./Routes/AppRouter.js";
 function AppLayout() {
   return (
     <>
       <Provider store={store}>
-        <RouterProvider router={AppRouter}></RouterProvider>
+        <RouterProvider router={appRouter}></RouterProvider>
       </Provider>
     </>
   );

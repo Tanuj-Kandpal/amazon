@@ -8,7 +8,7 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: function (state: State, action: PayloadAction<ProductDetails>) {
-      if (!state.items.some((item) => item.id === action.payload.id)) {
+      if (!state.items.some((item) => item.index === action.payload.index)) {
         state.items.push(action.payload);
       }
     },
@@ -17,19 +17,17 @@ const cartSlice = createSlice({
     },
     removeItem: function (state: State, action: Action) {
       state.items = state.items.filter(
-        (item) => item.id !== action.payload // Ensure the correct item is removed
+        (item) => item.index !== action.payload // Ensure the correct item is removed
       );
     },
     increaseItemQuantity: function (state: State, action: Action) {
-      const item = state.items.find((item) => item.id === action.payload);
-      console.log(state.items);
-
+      const item = state.items.find((item) => item.index === action.payload);
       if (item) {
         item.quantity++;
       }
     },
     decreaseItemQuantity: function (state: State, action: Action) {
-      const item = state.items.find((item) => item.id === action.payload);
+      const item = state.items.find((item) => item.index === action.payload);
       if (item && item.quantity > 0) {
         item.quantity--;
       }
